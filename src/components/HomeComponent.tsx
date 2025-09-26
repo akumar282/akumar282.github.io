@@ -87,7 +87,7 @@ export function HomeComponent() {
       <div
         className='w-screen flex items-center flex-col text-center text-white font-primary justify-center bg-violet-500'
         id='about-section'>
-        <div className='h-7/12 items-center my-10 flex-col space-y-5 flex' id='Experience Div'>
+        <div className='h-7/12 items-center my-10 flex-col space-y-5 flex max-w-[1800px]' id='Experience Div'>
           <h1 className='text-white mx-4 pb-4 font-primary text-3xl'>
             Experience (places i've worked)
           </h1>
@@ -103,7 +103,6 @@ export function HomeComponent() {
                 <div className='flex justify-center mt-3 items-center'>
                   <img src={boeing} className='lg:w-3/12 w-7/12' alt='Boeing Logo'/>
                 </div>
-                {/*<h1 className='text-2xl'>The Boeing Company</h1>*/}
                 <h3 className='m-3 lg:mr-5'>
                   As a software engineer, I worked in the Integrated Modular Avionics team on the Common Core System,
                   which is the brains of the airplane.
@@ -179,7 +178,7 @@ export function HomeComponent() {
       <div
         className='w-screen flex items-center flex-col text-center text-white font-primary justify-center bg-indigo-600'
         id='about-section'>
-        <div className='w-11/12 h-7/12 items-center my-10 flex-col space-y-4 flex' id='Experience Div'>
+        <div className='w-11/12 h-7/12 max-w-[1500px] items-center my-10 flex-col space-y-4 flex' id='Experience Div'>
           <h1 className='text-white mb-8 font-primary text-2xl'>
             Stuff I know how to use (im really good at these things)
           </h1>
@@ -217,7 +216,7 @@ export function HomeComponent() {
       <div
         className='w-screen flex items-center flex-col text-center pt-5 text-white font-primary justify-center bg-teal-600'
         id='Projects'>
-        <div className='w-11/12 h-7/12 items-center my-10 flex-col space-y-4 flex' id='Experience Div'>
+        <div className='w-11/12 h-7/12 max-w-[1500px] items-center my-10 flex-col space-y-4 flex' id='Experience Div'>
           <h1 className='mb-8 font-primary text-white text-2xl'>
             Projects (stuff i've made that I think is cool)
           </h1>
