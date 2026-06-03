@@ -47,7 +47,7 @@ export function HomeComponent() {
               className={`relative z-10 flex h-full max-w-[1580px] flex-col items-start justify-center mx-auto ${typewriterDone ? '[&_.Typewriter__cursor]:hidden' : ''}`}
               id='typewriter'
             >
-              <h1 className='mb-40 ml-5 text-left font-primary text-4xl text-black'>
+              <h1 className='mb-40 ml-10 text-left font-primary text-4xl text-black'>
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter.typeString('Hello, my name is Abhi!')
@@ -60,19 +60,25 @@ export function HomeComponent() {
               </h1>
             </div>
             <div className='pointer-events-none absolute bottom-0 left-1/2 h-[300px] w-full max-w-[1728px] -translate-x-1/2'>
-              <svg className='absolute bottom-0 left-1/2 z-0 h-[300px] w-[1728px] max-w-none -translate-x-1/2' viewBox='0 0 1728 300' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <path d='M698 230.5C698 314.171 504.587 382 266 382C27.413 382 -166 314.171 -166 230.5C-166 146.829 27.413 79 266 79C504.587 79 698 146.829 698 230.5Z' fill='#6AB06E'/>
-                <path d='M1394 285C1394 413.682 1171.93 518 898 518C624.067 518 402 413.682 402 285C402 156.318 624.067 52 898 52C1171.93 52 1394 156.318 1394 285Z' fill='#A0D283'/>
-                <path d='M1972 290.5C1972 450.939 1749.93 581 1476 581C1202.07 581 980 450.939 980 290.5C980 130.061 1202.07 0 1476 0C1749.93 0 1972 130.061 1972 290.5Z' fill='#93C47A'/>
+              <svg className='absolute bottom-0 left-1/2 z-0 h-[300px]  max-w-none -translate-x-1/2' viewBox='0 0 3000 331' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                <path d='M3324 230.5C3324 314.171 3130.59 382 2892 382C2653.41 382 2460 314.171 2460 230.5C2460 146.829 2653.41 79 2892 79C3130.59 79 3324 146.829 3324 230.5Z' fill='#6AB06E'/>
+                <path d='M4020 285C4020 413.682 3797.93 518 3524 518C3250.07 518 3028 413.682 3028 285C3028 156.318 3250.07 52 3524 52C3797.93 52 4020 156.318 4020 285Z' fill='#A0D283'/>
+                <path d='M4598 290.5C4598 450.939 4375.93 581 4102 581C3828.07 581 3606 450.939 3606 290.5C3606 130.061 3828.07 0 4102 0C4375.93 0 4598 130.061 4598 290.5Z' fill='#93C47A'/>
+                <path d='M1372 300.5C1372 384.171 1178.59 452 940 452C701.413 452 508 384.171 508 300.5C508 216.829 701.413 149 940 149C1178.59 149 1372 216.829 1372 300.5Z' fill='#6AB06E'/>
+                <path d='M2068 355C2068 483.682 1845.93 588 1572 588C1298.07 588 1076 483.682 1076 355C1076 226.318 1298.07 122 1572 122C1845.93 122 2068 226.318 2068 355Z' fill='#A0D283'/>
+                <path d='M2646 360.5C2646 520.939 2423.93 651 2150 651C1876.07 651 1654 520.939 1654 360.5C1654 200.061 1876.07 70 2150 70C2423.93 70 2646 200.061 2646 360.5Z' fill='#93C47A'/>
+                <path d='M2873 361C2873 454.888 2735.78 531 2566.5 531C2397.22 531 2260 454.888 2260 361C2260 267.112 2397.22 191 2566.5 191C2735.78 191 2873 267.112 2873 361Z' fill='#6A986C'/>
+                <path d='M702 450.5C702 647.39 460.01 807 161.5 807C-137.01 807 -379 647.39 -379 450.5C-379 253.61 -137.01 94 161.5 94C460.01 94 702 253.61 702 450.5Z' fill='#6A986C'/>
               </svg>
+
               <img className='tree-fade-in absolute -bottom-10 left-[4%] w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[0] }} src={tree} alt=''/>
               <img className='tree-fade-in absolute bottom-20 left-[12%] w-20 md:w-28' style={{ animationDelay: treeAnimationDelays[1] }} src={tree} alt=''/>
               <img className='tree-fade-in absolute bottom-8 left-[24%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[2] }} src={tree} alt=''/>
               <img className='tree-fade-in absolute bottom-20 left-[35%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[3] }} src={tree} alt=''/>
               <img className='tree-fade-in absolute bottom-36 left-[48%] w-20 md:w-28' style={{ animationDelay: treeAnimationDelays[4] }} src={tree} alt=''/>
-              <img className='tree-fade-in absolute bottom-64 left-[75%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[5] }} src={tree} alt=''/>
-              <img className='tree-fade-in absolute bottom-44 left-[89%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[6] }} src={tree} alt=''/>
-              <img className='tree-fade-in absolute bottom-20 left-[66%] w-20 md:w-28' style={{ animationDelay: treeAnimationDelays[7] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-48 left-[75%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[5] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-40 left-[89%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[6] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-18 left-[66%] w-20 md:w-28' style={{ animationDelay: treeAnimationDelays[7] }} src={tree} alt=''/>
             </div>
           </div>
         </div>
@@ -80,7 +86,7 @@ export function HomeComponent() {
       <div
         className='w-screen flex items-center flex-col text-center text-white font-primary justify-center bg-violet-800'
         id='about-section'>
-        <div className='max-w-[1580px] h-7/12 justify-start flex-col py-10 space-y-6 flex'>
+        <div className='max-w-[1280px] w-11/12 h-7/12 justify-start flex-col py-10 space-y-6 flex'>
           <h1 className='text-white font-primary text-3xl'>
             About me
           </h1>
