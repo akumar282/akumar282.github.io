@@ -1,4 +1,3 @@
-import waves from '../assets/waves.png'
 import b777x from '../assets/b777-9x_wh001.jpg'
 import ninety8point6 from '../assets/ninety8point6.jpg'
 import mcw from '../assets/mcw.png'
@@ -16,16 +15,21 @@ import github from '../assets/github.svg'
 import gitmatch from '../assets/gitmatch.png'
 import pglang from '../assets/pglang.png'
 import resume from '../assets/resume.svg'
-import down from '../assets/down.png'
+import tree from '../assets/tree.svg'
 import Typewriter from 'typewriter-effect'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 
 export function HomeComponent() {
+  const [typewriterDone, setTypewriterDone] = useState(false)
+  const treeAnimationDelays = useMemo(
+    () => ['0ms', '140ms', '280ms', '420ms', '560ms', '700ms', '840ms', '980ms'].sort(() => Math.random() - 0.5),
+    [],
+  )
 
-  
+
   useEffect(() => {
     Aos.init({
       duration: 3000,
@@ -36,23 +40,39 @@ export function HomeComponent() {
 
   return (
     <>
-      <div className='w-screen h-screen bg-indigo-950' id='screen'>
-        <div style={{backgroundImage: `url(${waves})`}}
-             className='bg-center bg-repeat h-full w-full flex justify-center items-center' id='background'>
-          <div
-            className='w-full h-full rounded-xl bg-white/12 bg-clip-padding backdrop-filter flex flex-col items-center justify-center backdrop-contrast-125'>
-            <div className='flex items-center w-11/12 h-full justify-center flex-col space-y-4 p-2' id='typewriter'>
-              <h1 className='text-white text-center font-primary text-4xl'>
+      <div className='relative h-screen w-screen overflow-hidden bg-[#FFF1C5]' id='screen'>
+        <div className='relative h-full w-full' id='background'>
+          <div className='relative h-full w-full'>
+            <div
+              className={`relative z-10 flex h-full max-w-[1580px] flex-col items-start justify-center mx-auto ${typewriterDone ? '[&_.Typewriter__cursor]:hidden' : ''}`}
+              id='typewriter'
+            >
+              <h1 className='mb-40 ml-5 text-left font-primary text-4xl text-black'>
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter.typeString('Hello, my name is Abhi!')
+                      .typeString('<br />')
+                      .typeString('<span class="text-2xl">I\'m a software engineer</span>')
+                      .callFunction(() => setTypewriterDone(true))
                       .start()
                   }}
                 />
               </h1>
             </div>
-            <div className='flex items-center animate-bounce justify-center'>
-              <img className='mx-3 w-15 h-15' src={down}/>
+            <div className='pointer-events-none absolute bottom-0 left-1/2 h-[300px] w-full max-w-[1728px] -translate-x-1/2'>
+              <svg className='absolute bottom-0 left-1/2 z-0 h-[300px] w-[1728px] max-w-none -translate-x-1/2' viewBox='0 0 1728 300' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                <path d='M698 230.5C698 314.171 504.587 382 266 382C27.413 382 -166 314.171 -166 230.5C-166 146.829 27.413 79 266 79C504.587 79 698 146.829 698 230.5Z' fill='#6AB06E'/>
+                <path d='M1394 285C1394 413.682 1171.93 518 898 518C624.067 518 402 413.682 402 285C402 156.318 624.067 52 898 52C1171.93 52 1394 156.318 1394 285Z' fill='#A0D283'/>
+                <path d='M1972 290.5C1972 450.939 1749.93 581 1476 581C1202.07 581 980 450.939 980 290.5C980 130.061 1202.07 0 1476 0C1749.93 0 1972 130.061 1972 290.5Z' fill='#93C47A'/>
+              </svg>
+              <img className='tree-fade-in absolute -bottom-10 left-[4%] w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[0] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-20 left-[12%] w-20 md:w-28' style={{ animationDelay: treeAnimationDelays[1] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-8 left-[24%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[2] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-20 left-[35%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[3] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-36 left-[48%] w-20 md:w-28' style={{ animationDelay: treeAnimationDelays[4] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-64 left-[75%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[5] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-44 left-[89%] hidden w-20 md:w-28 lg:block' style={{ animationDelay: treeAnimationDelays[6] }} src={tree} alt=''/>
+              <img className='tree-fade-in absolute bottom-20 left-[66%] w-20 md:w-28' style={{ animationDelay: treeAnimationDelays[7] }} src={tree} alt=''/>
             </div>
           </div>
         </div>
@@ -60,7 +80,7 @@ export function HomeComponent() {
       <div
         className='w-screen flex items-center flex-col text-center text-white font-primary justify-center bg-violet-800'
         id='about-section'>
-        <div className='w-10/12 h-7/12 justify-start flex-col py-10 space-y-6 flex'>
+        <div className='max-w-[1580px] h-7/12 justify-start flex-col py-10 space-y-6 flex'>
           <h1 className='text-white font-primary text-3xl'>
             About me
           </h1>
